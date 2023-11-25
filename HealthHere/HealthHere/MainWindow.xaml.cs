@@ -24,12 +24,29 @@ namespace HealthHere
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Catalog());
+            ViewModel.MainFrame = MainFrame;
+            ViewModel.MainFrame.Navigate(new Catalog());
+            
         }
 
         private void UserPage_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new UserPage());
+            if(UserText.Text == "Вход")
+            {
+                ViewModel.MainFrame.Navigate(new Login());
+                return;
+            }
+                ViewModel.MainFrame.Navigate(new UserPage());
+        }
+
+        private void Catalog_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.MainFrame.Navigate(new Catalog());
+        }
+
+        private void ShopCart_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.MainFrame.Navigate(new ShopCart());
         }
     }
 }

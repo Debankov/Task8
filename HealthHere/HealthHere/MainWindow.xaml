@@ -31,9 +31,24 @@
 
         <StackPanel Background="Bisque" Grid.RowSpan="2">
             <TextBlock Text="Меню" TextAlignment="Center"></TextBlock>
-            <Button Content="Профиль" Margin="5" Click="UserPage_Click"/>
-            <Button Content="Товары" Margin="5"/>
-            <Button Content="Корзина" Margin="5"/>
+            <Button x:Name="UserButton" Margin="5" Click="UserPage_Click">
+                <TextBlock
+                    x:Name="UserText"
+                    Text="Вход"
+                    />
+            </Button>
+            <Button x:Name="CatalogButton" Margin="5" Click="Catalog_Click">
+                <TextBlock
+                    x:Name="CatalogText"
+                    Text="Товары"
+                    />
+            </Button>
+            <Button x:Name="ShopCartButton" Margin="5" Click="ShopCart_Click">
+                <TextBlock
+                    x:Name="ShopcartText"
+                    Text="Корзина"
+                    />
+            </Button>
         </StackPanel>
 
         <Grid Grid.Column="1"  Grid.Row="2">

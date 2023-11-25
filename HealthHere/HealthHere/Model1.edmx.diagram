@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4eee5d4a313844968bd2f7eed99af0ca" Name="Diagram1">
+        <EntityTypeShape EntityType="HealthHereModel.order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthHereModel.order_sctructure" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthHereModel.pharmacy" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthHereModel.product" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthHereModel.product_category" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthHereModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthHereModel.user" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="HealthHereModel.FK_order_pharmacy" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthHereModel.FK_order_sctructure_order" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthHereModel.FK_order_user" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthHereModel.FK_order_sctructure_product" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthHereModel.FK_product_product_category" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

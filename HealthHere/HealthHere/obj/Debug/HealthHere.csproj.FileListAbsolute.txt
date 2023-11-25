@@ -30,3 +30,10 @@ C:\Users\koval\source\repos\HealthHere\HealthHere\obj\Debug\Frames\Changing\Prod
 C:\Users\koval\source\repos\HealthHere\HealthHere\obj\Debug\Frames\User\Registration.baml
 C:\Users\koval\source\repos\HealthHere\HealthHere\obj\Debug\Frames\User\ShopCart.baml
 C:\Users\koval\source\repos\HealthHere\HealthHere\obj\Debug\Frames\User\UserPage.baml
+C:\Users\koval\source\repos\HealthHere\HealthHere\bin\Debug\EntityFramework.dll
+C:\Users\koval\source\repos\HealthHere\HealthHere\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\koval\source\repos\HealthHere\HealthHere\bin\Debug\EntityFramework.xml
+C:\Users\koval\source\repos\HealthHere\HealthHere\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\koval\source\repos\HealthHere\HealthHere\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\koval\source\repos\HealthHere\HealthHere\obj\Debug\HealthHere_Content.g.cs
+C:\Users\koval\source\repos\HealthHere\HealthHere\obj\Debug\HealthHere.csproj.CopyComplete

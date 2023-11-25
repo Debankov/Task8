@@ -15,14 +15,14 @@
                 <Grid>
 
                     <TextBlock Text="Логин" HorizontalAlignment="Left" FontSize="20"/>
-                    <TextBox HorizontalAlignment="Right" Width="200" FontSize="20"/>
+                    <TextBox x:Name="userLogin" Text="{Binding login}" HorizontalAlignment="Right" Width="200" FontSize="20"/>
                 </Grid>
                 <Grid Margin="0 15 0 25">
                     <TextBlock Text="Пароль" HorizontalAlignment="Left" FontSize="20"/>
-                    <TextBox HorizontalAlignment="Right" Width="200" FontSize="20"/>
+                    <PasswordBox x:Name="userPassword" HorizontalAlignment="Right" Width="200" FontSize="20" MaxLength="20"/>
                 </Grid>
                 <Grid>
-                    <Button HorizontalAlignment="Center" Width="auto" Content="Зарегистрироватсья" FontSize="20"/>
+                    <Button HorizontalAlignment="Center" Width="auto" Content="Зарегистрироваться" FontSize="20" Click="reg_Click"/>
                 </Grid>
             </StackPanel>
         </Grid>

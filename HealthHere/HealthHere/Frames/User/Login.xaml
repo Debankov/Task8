@@ -14,16 +14,21 @@
             <StackPanel>
                 <Grid>
 
-                    <TextBlock Text="Логин" HorizontalAlignment="Left" FontSize="20"/>
-                    <TextBox HorizontalAlignment="Right" Width="200" FontSize="20"/>
+                    <TextBlock  Text="Логин" HorizontalAlignment="Left" FontSize="20"/>
+                    <TextBox x:Name="userLogin" Text="{Binding login}" HorizontalAlignment="Right" Width="200" FontSize="20"/>
                 </Grid>
                 <Grid Margin="0 15 0 25">
-                    <TextBlock Text="Пароль" HorizontalAlignment="Left" FontSize="20"/>
-                    <TextBox HorizontalAlignment="Right" Width="200" FontSize="20"/>
+                    <TextBlock  Text="Пароль" HorizontalAlignment="Left" FontSize="20"/>
+                    <PasswordBox x:Name="userPassword" HorizontalAlignment="Right" Width="200" FontSize="20"/>
                 </Grid>
                 <Grid>
-                    <Button HorizontalAlignment="Left" Width="auto" Content="Зарегистрироватсья" FontSize="20"/>
-                    <Button HorizontalAlignment="Right" Width="auto" Content="Войти" FontSize="20"/>
+                    <Button x:Name="LoginButton" HorizontalAlignment="Center" Width="190" Content="Войти" FontSize="20" Click="Login_click"/>
+                </Grid>
+                <Grid>
+                    <TextBlock  
+                        HorizontalAlignment="Center"
+                        Text="Нет аккаунта?"/>
+                    <Button HorizontalAlignment="Center" Width="auto" Content="Зарегистрироватсья" FontSize="20" Margin="20" Click="Registration_Click"/>
                 </Grid>
             </StackPanel>
         </Grid>
