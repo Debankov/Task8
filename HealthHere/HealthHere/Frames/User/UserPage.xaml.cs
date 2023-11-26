@@ -20,9 +20,21 @@ namespace HealthHere.Frames
     /// </summary>
     public partial class UserPage : Page
     {
+        ViewModel _currentUser = new ViewModel();
+
+
         public UserPage()
         {
             InitializeComponent();
+
+            GridUserName.DataContext= _currentUser;
+
         }
+        
+        class CurrentUser
+        {
+        
+        }
+ 
     }
 }

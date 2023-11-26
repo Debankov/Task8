@@ -49,6 +49,13 @@
                     Text="Корзина"
                     />
             </Button>
+            <TextBlock
+                x:Name="AdminText"
+                Visibility="Hidden"
+                HorizontalAlignment="Center"
+                Text="Админ панель"/>
+            <Button x:Name="AdminButtonP" Margin="5" Click="ProductChange_Click" Content="Товары" Visibility="Hidden"/>
+            <Button x:Name="AdminButtonU" Margin="5" Click="UserChange_Click" Content="Пользователи" Visibility="Hidden"/>
         </StackPanel>
 
         <Grid Grid.Column="1"  Grid.Row="2">

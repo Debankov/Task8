@@ -37,3 +37,5 @@ C:\Users\koval\source\repos\HealthHere\HealthHere\bin\Debug\EntityFramework.SqlS
 C:\Users\koval\source\repos\HealthHere\HealthHere\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\koval\source\repos\HealthHere\HealthHere\obj\Debug\HealthHere_Content.g.cs
 C:\Users\koval\source\repos\HealthHere\HealthHere\obj\Debug\HealthHere.csproj.CopyComplete
+C:\Users\koval\source\repos\HealthHere\HealthHere\obj\Debug\Frames\Changing\ListOfProduct.g.cs
+C:\Users\koval\source\repos\HealthHere\HealthHere\obj\Debug\Frames\Changing\ListOfProduct.baml

@@ -9,6 +9,32 @@
       Title="ProductChange">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="Text_Block_Name" Text="Форма редактирования" FontSize="30" FontWeight="Black" Margin="20 20 0 0" Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <StackPanel  Width="600" HorizontalAlignment="Stretch" Margin="20 80 0 0">
+            <Grid>
+                <TextBlock HorizontalAlignment="Left" Text="Наименование" FontSize="25"/>
+                <TextBox HorizontalAlignment="Right" Text="{Binding name}" FontSize="25" Width="400"/>
+            </Grid>
+            <Grid>
+                <TextBlock HorizontalAlignment="Left" Text="Описание" FontSize="25"/>
+                <TextBox HorizontalAlignment="Right" Text="{Binding description}" FontSize="25" Width="400"/>
+            </Grid>
+            <Grid>
+                <TextBlock HorizontalAlignment="Left" Text="Категория" FontSize="25"/>
+                <TextBox HorizontalAlignment="Right" Text="{Binding category_product_id.name}" FontSize="25" Width="400"/>
+            </Grid>
+            <Grid>
+                <TextBlock HorizontalAlignment="Left" Text="Количество" FontSize="25"/>
+                <TextBox HorizontalAlignment="Right" Text="{Binding count}" FontSize="25" Width="400"/>
+            </Grid>
+            <Grid>
+                <TextBlock HorizontalAlignment="Left" Text="Стоимость" FontSize="25"/>
+                <TextBox HorizontalAlignment="Right" Text="{Binding price}" FontSize="25" Width="400"/>
+            </Grid>
+            <Button x:Name="BtnSave" Content="Сохранить изменения" FontSize="20" HorizontalAlignment="Right" Width="250" Margin="0 20 0 0" Click="BtnSave_Click" Padding="5"/>
+        </StackPanel>
     </Grid>
 </Page>

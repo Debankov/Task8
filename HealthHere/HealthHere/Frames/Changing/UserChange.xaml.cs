@@ -20,9 +20,50 @@ namespace HealthHere.Frames.Changing
     /// </summary>
     public partial class UserChange : Page
     {
+        private user currentUser = new user();
         public UserChange()
         {
             InitializeComponent();
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                Reload();
+            }
+        }
+
+        private void Reload()
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                HealthHereEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                GridUser.ItemsSource = HealthHereEntities.GetContext().user.ToList();
+                DataContext = currentUser;
+            }
+        }
+
+        private void BtnRemove_Click(object sender, RoutedEventArgs e)
+        {
+            var CarsForRemoving = GridUser.SelectedItems.Cast<user>().ToList();
+
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {CarsForRemoving.Count()} элементов ?",
+                "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    HealthHereEntities.GetContext().user.RemoveRange(CarsForRemoving);
+                    HealthHereEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены");
+
+                    GridUser.ItemsSource = HealthHereEntities.GetContext().user.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
     }
 }

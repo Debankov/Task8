@@ -14,17 +14,17 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid x:Name="GridTitle">
+        <Grid x:Name="GridUserName">
             <TextBlock
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Text="{Binding Path=user.login }"
+                Text="{Binding login}"
                 FontSize="25"
                 />
         </Grid>
 
         <Grid Grid.Row="2" VerticalAlignment="Center">
-            <Button Content="КЛИКНИ"/>
+            <Button Content="Тут должна была быть история покупок"/>
         </Grid>
     </Grid>
 </Page>

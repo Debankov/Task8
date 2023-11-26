@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\koval\source\repos\HealthHere\HealthHere\App.xaml
-9794870499
+10364188650
 2-1957146511
-251767475596
+261261512753
 181874374923
-Frames\Shop\Catalog.xaml;Frames\Changing\UserChange.xaml;Frames\Shop\ProductCard.xaml;Frames\User\Login.xaml;Frames\Changing\ProductChange.xaml;Frames\User\Registration.xaml;Frames\User\ShopCart.xaml;Frames\User\UserPage.xaml;MainWindow.xaml;
+Frames\Changing\ListOfProduct.xaml;Frames\Shop\Catalog.xaml;Frames\Changing\UserChange.xaml;Frames\Shop\ProductCard.xaml;Frames\User\Login.xaml;Frames\Changing\ProductChange.xaml;Frames\User\Registration.xaml;Frames\User\ShopCart.xaml;Frames\User\UserPage.xaml;MainWindow.xaml;
 
 True
 

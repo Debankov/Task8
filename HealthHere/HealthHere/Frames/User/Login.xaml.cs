@@ -68,16 +68,23 @@ namespace HealthHere.Frames
 
             foreach (var user in users)
             {
-
                 if (_currentUser.login == user.login && GetHash(userPassword.Password) == user.password)
                 {
                     valid = true;
                     is_stuff = (bool)user.is_stuff;
                     ViewModel.user_id = user.user_id;
                     ViewModel.is_stuff = is_stuff; 
+                    ViewModel.login = user.login;
                     ViewModel.MainFrame.Navigate(new UserPage());
                     MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
                     mainWindow.UserText.Text = "Профиль";
+                    if(is_stuff == true)
+                    {
+                        mainWindow.AdminText.Visibility= Visibility.Visible;
+                        mainWindow.AdminButtonP.Visibility= Visibility.Visible;
+                        mainWindow.AdminButtonU.Visibility= Visibility.Visible;
+                    }
+                    
                 } 
             }
 

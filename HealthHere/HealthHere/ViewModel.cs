@@ -15,5 +15,7 @@ namespace HealthHere
         
         public static bool is_stuff { get; set; }
 
+        public static string login { get; set; }
+
     }
 }

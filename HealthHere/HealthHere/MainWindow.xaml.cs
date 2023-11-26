@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HealthHere.Frames;
+using HealthHere.Frames.Changing;
 
 namespace HealthHere
 {
@@ -47,6 +48,16 @@ namespace HealthHere
         private void ShopCart_Click(object sender, RoutedEventArgs e)
         {
             ViewModel.MainFrame.Navigate(new ShopCart());
+        }
+
+        private void UserChange_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.MainFrame.Navigate(new UserChange());
+        }
+
+        private void ProductChange_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.MainFrame.Navigate(new ListOfProduct());
         }
     }
 }

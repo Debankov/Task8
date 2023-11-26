@@ -20,7 +20,8 @@ namespace HealthHere.Frames
     /// </summary>
     public partial class Catalog : Page
     {
-        private order order = new order();
+        private order_sctructure order_Sctructure = new order_sctructure();
+        private order Order = new order();
         public Catalog()
         {
             InitializeComponent();
@@ -41,9 +42,40 @@ namespace HealthHere.Frames
             }
         }
 
-        public static void buy_button(object sender, RoutedEventArgs e)
+        private void buy_button(object sender, RoutedEventArgs e)
         {
 
+            var selectedProduct = (sender as FrameworkElement)?.DataContext as product;
+
+            if (selectedProduct != null)
+            {
+                order_Sctructure.product_id = selectedProduct.product_id;
+                selectedProduct.count--;
+
+                if (ViewModel.user_id != 0)
+                {
+                    Order.user_id = ViewModel.user_id;
+                    
+                }
+
+                if (order_Sctructure.order_id == 0)
+                {
+                    order_Sctructure.order_id = Order.order_id;
+                    HealthHereEntities.GetContext().order_sctructure.Add(order_Sctructure);
+                }
+                    
+
+                try
+                {
+                    HealthHereEntities.GetContext().SaveChanges();
+                    order_Sctructure = new order_sctructure();
+                    Reload(); 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
     }
 }
