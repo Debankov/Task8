@@ -26,9 +26,8 @@ namespace HealthHere
             if (Instance == null)
                 Instance= new HealthHereEntities();
             return Instance;
-            
+
         }
-    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -39,7 +38,6 @@ namespace HealthHere
         public virtual DbSet<pharmacy> pharmacy { get; set; }
         public virtual DbSet<product> product { get; set; }
         public virtual DbSet<product_category> product_category { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<user> user { get; set; }
     }
 }

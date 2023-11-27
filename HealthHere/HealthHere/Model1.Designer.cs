@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\koval\source\repos\HealthHere\HealthHere\Model1.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\Debankov\Desktop\132\Task8\HealthHere\HealthHere\Model1.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

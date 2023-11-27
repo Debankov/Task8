@@ -44,6 +44,14 @@ namespace HealthHere.Frames
 
         private void buy_button(object sender, RoutedEventArgs e)
         {
+            if(ViewModel.user_id == 0)
+            {
+                MessageBox.Show("вы не авторизированны");
+                return;
+            }
+            
+
+            Order.user_id = ViewModel.user_id;
 
             var selectedProduct = (sender as FrameworkElement)?.DataContext as product;
 
@@ -58,9 +66,25 @@ namespace HealthHere.Frames
                     
                 }
 
-                if (order_Sctructure.order_id == 0)
+                if (Order.order_id == 0)
+                    HealthHereEntities.GetContext().order.Add(Order);
+                }
+
+            order_Sctructure.order_id = HealthHereEntities.GetContext().order.Max(a => a.order_id);
+
+
+            try
+            {
+                    HealthHereEntities.GetContext().SaveChanges();
+                }
+                catch (Exception ex)
                 {
-                    order_Sctructure.order_id = Order.order_id;
+                    MessageBox.Show(ex.InnerException.ToString());
+                }
+
+                if (order_Sctructure.id == 0)
+                {
+                    order_Sctructure.count = 1;
                     HealthHereEntities.GetContext().order_sctructure.Add(order_Sctructure);
                 }
                     
@@ -73,9 +97,10 @@ namespace HealthHere.Frames
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message.ToString());
+                    MessageBox.Show(ex.InnerException.ToString());
                 }
+
             }
         }
     }
-}
+

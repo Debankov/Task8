@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="HealthHereModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="HeathHereModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="order">
     <Key>
       <PropertyRef Name="order_id" />
@@ -57,16 +57,6 @@
     <Property Name="category_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="category_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="product" Relationship="Self.FK_product_product_category" FromRole="product_category" ToRole="product" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="user">
     <Key>
@@ -145,7 +135,6 @@
     <EntitySet Name="pharmacy" EntityType="Self.pharmacy" />
     <EntitySet Name="product" EntityType="Self.product" />
     <EntitySet Name="product_category" EntityType="Self.product_category" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="user" EntityType="Self.user" />
     <AssociationSet Name="FK_order_pharmacy" Association="Self.FK_order_pharmacy">
       <End Role="pharmacy" EntitySet="pharmacy" />

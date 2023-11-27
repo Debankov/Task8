@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище HealthHereModelContainer" CdmEntityContainer="HealthHereEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище HeathHereModelContainer" CdmEntityContainer="HealthHereEntities">
     <EntitySetMapping Name="order">
-      <EntityTypeMapping TypeName="HealthHereModel.order">
+      <EntityTypeMapping TypeName="HeathHereModel.order">
         <MappingFragment StoreEntitySet="order">
           <ScalarProperty Name="order_id" ColumnName="order_id" />
           <ScalarProperty Name="user_id" ColumnName="user_id" />
@@ -14,7 +14,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="order_sctructure">
-      <EntityTypeMapping TypeName="HealthHereModel.order_sctructure">
+      <EntityTypeMapping TypeName="HeathHereModel.order_sctructure">
         <MappingFragment StoreEntitySet="order_sctructure">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="order_id" ColumnName="order_id" />
@@ -24,7 +24,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="pharmacy">
-      <EntityTypeMapping TypeName="HealthHereModel.pharmacy">
+      <EntityTypeMapping TypeName="HeathHereModel.pharmacy">
         <MappingFragment StoreEntitySet="pharmacy">
           <ScalarProperty Name="pharmacy_id" ColumnName="pharmacy_id" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -35,7 +35,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="product">
-      <EntityTypeMapping TypeName="HealthHereModel.product">
+      <EntityTypeMapping TypeName="HeathHereModel.product">
         <MappingFragment StoreEntitySet="product">
           <ScalarProperty Name="product_id" ColumnName="product_id" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -48,26 +48,15 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="product_category">
-      <EntityTypeMapping TypeName="HealthHereModel.product_category">
+      <EntityTypeMapping TypeName="HeathHereModel.product_category">
         <MappingFragment StoreEntitySet="product_category">
           <ScalarProperty Name="category_id" ColumnName="category_id" />
           <ScalarProperty Name="category_name" ColumnName="category_name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="HealthHereModel.sysdiagrams">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="user">
-      <EntityTypeMapping TypeName="HealthHereModel.user">
+      <EntityTypeMapping TypeName="HeathHereModel.user">
         <MappingFragment StoreEntitySet="user">
           <ScalarProperty Name="user_id" ColumnName="user_id" />
           <ScalarProperty Name="login" ColumnName="login" />
